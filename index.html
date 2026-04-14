@@ -39,7 +39,7 @@ body {
 /* Logo dans la carte (PLUS GRAND + MOINS D'ESPACE) */
 .card-logo {
     max-width: none;   /* agrandi */
-    width: 100%;
+    width: 90%;
     margin-bottom: 0px; /* réduit fortement l'espace */
 }
 
@@ -53,6 +53,32 @@ p {
 .card p:first-of-type {
     margin-top: 8px;
 }
+button {
+     margin-top: 20px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #c8a46b;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a8844f;
+    transform: translateY(-2px);
+    }
+/* Texte caché */
+.hidden-text {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f4f7f8;
+    border-radius: 12px;
+    border-left: 5px solid #c8a46b;
+}
+    
 </style>
 </head>
 
@@ -74,11 +100,18 @@ p {
         Aujourd’hui, certains lieux murmurent encore leurs secrets.
         </p>
 
-        <p><strong>🧭 Saurez-vous les découvrir ?</strong></p>
+        <button onclick="showText()">🧭 Saurez-vous les découvrir ?</button>
+       <div id="secret" class="hidden-text">
+            <strong>Le secret du clocher de Sainte-Geneviève :</strong><br><br>
+            Garance a laissé des traces dans le village… A toi de les retrouver.
+        </div>
 
     </div>
-
 </div>
-
+<script>
+function showText() {
+    document.getElementById("secret").style.display = "block";
+}
+</script>
 </body>
 </html>
