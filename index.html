@@ -5,12 +5,20 @@
 <title>La quête des 11 clochers</title>
 
 <style>
+    html, 
+body {
+    height: 100%;
+}
 body {
     margin: 0;
+    min-height: 100dvh; /* corrige le problème mobile */
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    
+
     background: linear-gradient(180deg, #a8c6d8, #eaf4f4);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     color: #2f3e4e;
 }
 
@@ -22,7 +30,7 @@ body {
 
 /* Logo principal */
 .logo {
-    max-width: 180px;
+    max-width: 220px;
     margin-bottom: 20px;
 }
 
@@ -36,7 +44,7 @@ body {
 
 /* Logo dans la carte */
 .card-logo {
-    max-width: 100px;
+    max-width: 120px;
     margin-bottom: 15px;
 }
 
@@ -46,25 +54,6 @@ p {
     margin-bottom: 15px;
 }
 
-/* Bouton */
-button {
-    margin-top: 20px;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    cursor: pointer;
-
-    background: #c8a46b;
-    color: white;
-
-    transition: 0.3s;
-}
-
-button:hover {
-    background: #a8844f;
-    transform: translateY(-2px);
-}
 </style>
 </head>
 
@@ -87,8 +76,6 @@ button:hover {
         </p>
 
         <p><strong>🧭Saurez-vous les découvrir ?</strong></p>
-
-        <button>Commencer l’aventure</button>
 
     </div>
 
