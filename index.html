@@ -5,13 +5,13 @@
 <title>La quête des 11 clochers</title>
 
 <style>
-    html, 
-body {
+html, body {
     height: 100%;
 }
+
 body {
     margin: 0;
-    min-height: 100dvh; /* corrige le problème mobile */
+    min-height: 100dvh;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
 
@@ -28,12 +28,6 @@ body {
     padding: 30px 20px;
 }
 
-/* Logo principal */
-.logo {
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
 /* Carte */
 .card {
     background: white;
@@ -42,18 +36,23 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Logo dans la carte */
+/* Logo dans la carte (PLUS GRAND + MOINS D'ESPACE) */
 .card-logo {
-    max-width: 300px;
-    margin-bottom: 15px;
+    max-width: 400px;   /* agrandi */
+    width: 100%;
+    margin-bottom: 5px; /* réduit fortement l'espace */
 }
 
 /* Texte */
 p {
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* un peu plus compact */
 }
 
+/* Supprime l'espace au-dessus du premier texte */
+.card p:first-of-type {
+    margin-top: 5px;
+}
 </style>
 </head>
 
@@ -75,7 +74,7 @@ p {
         Aujourd’hui, certains lieux murmurent encore leurs secrets.
         </p>
 
-        <p><strong>🧭Saurez-vous les découvrir ?</strong></p>
+        <p><strong>🧭 Saurez-vous les découvrir ?</strong></p>
 
     </div>
 
